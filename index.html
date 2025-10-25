@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera página web</title>
 </head>
+
 <body>
     <header>
         <h1>Universidad Central del Ecuador</h1>
@@ -23,7 +25,7 @@
         <!--Textos-->
         <strong>texto que quiero resaltar</strong>
         <br>
-        <em>Texto en cursiva resaltado</em>
+        <em>Juegos de matematicas</em>
         <i>Texto en cursiva</i>
         <u>Texto subrayado</u>
         <hr>
@@ -47,7 +49,92 @@
             <li>Quinto</li>
         </ol>
 
+        <ol type="A">
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>Tercero</li>
+            <li>Cuarto</li>
+            <li>Quinto</li>
+        </ol>
+
+        <ol type="1">
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>Tercero</li>
+            <li>Cuarto</li>
+            <li>Quinto</li>
+        </ol>
+
         <!--Tablas-->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Cédula</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Byron</th>
+                    <th>Flores</th>
+                    <th>1725046393</th>
+                    <th><button>Editar</button></th>
+                </tr>
+                <tr>
+                    <th>Jose</th>
+                    <th>Molina</th>
+                    <th>1726998446</th>
+                    <th><button>Editar</button></th>
+                </tr>
+                <tr>
+                    <th>Juan</th>
+                    <th>Ponce</th>
+                    <th>1765989743</th>
+                    <th><button>Editar</button></th>
+                </tr>
+                <tr>
+                    <th>Maria</th>
+                    <th>Lopez</th>
+                    <th>1798756566</th>
+                    <th><button>Editar</button></th>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <!--Contenedores HTML-->
+        <div>
+            <button>Actualizar</button>
+            <button>Eliminar</button>
+            <button>Guardar</button>
+
+        </div>
+        <!--header, body, nav, section-->
+
+        <!--Formularios-->
+        <form action="https://www.google.com">
+            <h1>Estudiante</h1>
+            <label for="id_nombre">Nombre:</label>
+            <input id="id_nombre" type="text">
+            <label for="id_email">Email:</label>
+            <input id="id_email" type="email">
+            <label for="id_fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input id="id_fecha_nacimiento" type="date">
+            <label for="id_password">Password:</label>
+            <input id="id_password" type="password">
+            <button>Guardar</button>
+        </form>
+
+        <!--Multimedia-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/800px-React-icon.svg.png"
+            alt="No se pudo presentar la imagen" width="300" height="200">
+        <img src="./img/aucas.jpg" alt="No se pudo presentar la imagen" width="300" height="200">
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+
 
     </section>
     <aside></aside>
@@ -56,4 +143,5 @@
         Todos los derechos reservados
     </footer>
 </body>
+
 </html>
