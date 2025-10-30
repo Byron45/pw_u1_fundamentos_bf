@@ -1,0 +1,23 @@
+h1 {
+            color: yellow;
+            background: blue;
+            border: 1px solid black;
+            width: 600px;
+            height: 90px;
+        }
+
+        h2 {
+            color: #DE5FD1;
+            background: #5FDE7D;
+            font-size: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border-bottom: 5px solid red;
+
+        }
+
+        p {
+            background: gray;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
