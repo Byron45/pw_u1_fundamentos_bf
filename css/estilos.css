@@ -1,3 +1,4 @@
+/*Tipo de elemento*/
 h1 {
             color: yellow;
             background: blue;
@@ -20,4 +21,8 @@ h1 {
         p {
             background: gray;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            background: black;
         }

@@ -1,0 +1,44 @@
+/*2. selector por Clase*/
+.titulos{
+    color: blue;
+    font-size: 30px;
+    background: yellow;
+}
+
+/*3. selector por ID*/
+#id_titulo{
+    color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: pink;
+}
+
+/*4. selector por Pseudoclase (Eventos)*/
+i:hover{
+    color: pink;
+    font-size: 50px;
+}
+
+input:focus{
+    background: lightgray;
+    border-color: blue;
+    border: 10px solid green;
+}
+
+/*5. selector por atributo*/
+[id]{
+    font-size: 40px;
+    color: blue;
+}
+
+img[alt*="uce"]{
+    width: 80px;
+    height: 50px;
+}
+
+/*img[alt="No1"]{
+    width: 80px;
+    height: 50px;
+}
+*/
+
+/*6. selector Universal*/
