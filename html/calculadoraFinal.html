@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/calculadoraFinal.css">
     <script src="../js/calculadoraFinal.js"></script>
 </head>
- 
+
 <body>
     <div class="container">
         <header> Calculadora</header>
@@ -16,31 +16,31 @@
         <section>
             <div id="calculadora">
                 <!-- <label id="display" for="">0+1=1</label> -->
-                <div id="display"></div>
-                <button>C</button>
-                <button>&larr;</button>
-                <button onclick="mostrarDisplay('%')">%</button>
-                <button onclick="mostrarDisplay('/')">/</button>
+                <div id="display">1+2=3</div>
+                <button onclick="resetearDisplay()">C</button>
+                <button onclick="borrar()"> &larr;</button>
+                <button onclick="guardarOperador('%')">%</button>
+                <button onclick="guardarOperador('/')">/</button>
                 <button onclick="mostrarDisplay(7)">7</button>
                 <button onclick="mostrarDisplay(8)">8</button>
                 <button onclick="mostrarDisplay(9)">9</button>
-                <button onclick="mostrarDisplay('*')">*</button>
+                <button onclick="guardarOperador('*')">*</button>
                 <button onclick="mostrarDisplay(4)">4</button>
                 <button onclick="mostrarDisplay(5)">5</button>
                 <button onclick="mostrarDisplay(6)">6</button>
-                <button onclick="mostrarDisplay('-')">-</button>
+                <button onclick="guardarOperador('-')">-</button>
                 <button onclick="mostrarDisplay(1)">1</button>
                 <button onclick="mostrarDisplay(2)">2</button>
                 <button onclick="mostrarDisplay(3)">3</button>
-                <button onclick="mostrarDisplay('+')">+</button>
+                <button onclick="guardarOperador('+')">+</button>
                 <button onclick="mostrarDisplay(0)">0</button>
                 <button onclick="mostrarDisplay('.')">.</button>
-                <button class="column-2" onclick="igual()">=</button>
- 
+                <button class="column-2" onclick="mostrarResultado()">=</button>
+
             </div>
         </section>
         <footer> Pie </footer>
     </div>
 </body>
- 
+
 </html>

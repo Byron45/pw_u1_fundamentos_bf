@@ -31,7 +31,7 @@
     border-radius: 7px;
 }
 
-.colum-2 {
+.column-2 {
     grid-column: span 2;
     /*Ocupa 2 columnas*/
 }

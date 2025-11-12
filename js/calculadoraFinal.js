@@ -1,41 +1,56 @@
-let num1 = 0;
-let num2 = 0;
+let num1 = null;
+let num2 = null;
+let operador = null;
 
-function mostrarDisplay(valor){
-let elemento = document.getElementById("display");
-elemento.innerText = elemento.innerText + valor;
+function mostrarDisplay(valor) {
+    let elemento = document.getElementById("display");
+    elemento.innerText = elemento.innerText + valor;
 }
 
-function sumar() {
-    let elementos = document.getElementById("display").innerText.split("+");
-    num1 = parseFloat(elementos[0]);
-    num2 = parseFloat(elementos[1]);
-    mostrarResultado(num1 + num2);
+function resetearDisplay() {
+    document.getElementById("display").innerText = '';
+    num1 = null;
+    num2 = null;
+    operador = null;
 }
 
-function restar() {
-    let elementos = document.getElementById("display").innerText.split("-");
-    num1 = parseFloat(elementos[0]);
-    num2 = parseFloat(elementos[1]);
-    mostrarResultado(num1 - num2);
+function borrar() {
+    let elemento = document.getElementById("display");
+    elemento.innerText = elemento.innerText.slice(0, -1);
 }
 
-function multiplicar() {
-    let elementos = document.getElementById("display").innerText.split("*");
-    num1 = parseFloat(elementos[0]);
-    num2 = parseFloat(elementos[1]);
-    mostrarResultado(num1 * num2);
+function guardarOperador(op) {
+    let elemento = document.getElementById("display");
+    num1 = parseFloat(elemento.innerText);
+    operador = op;
+    elemento.innerText = '';
 }
 
-function dividir() {
-    let elementos = document.getElementById("display").innerText.split("/");
-    num1 = parseFloat(elementos[0]);
-    num2 = parseFloat(elementos[1]);
-    mostrarResultado(num1 / num2);
-}
+function mostrarResultado() {
+    let elemento = document.getElementById("display");
+    num2 = parseFloat(elemento.innerText);
+    let resultado;
 
-function porcentaje() {
-    let elementos = document.getElementById("display").innerText.split("%");
-    num1 = parseFloat(elementos[0]);
-    mostrarResultado(num1 / 100);
+    switch (operador) {
+        case '+':
+            resultado = num1 + num2;
+            break;
+        case '-':
+            resultado = num1 - num2;
+            break;
+        case '*':
+            resultado = num1 * num2;
+            break;
+        case '/':
+            resultado = num1 / num2;
+            break;
+        case '%':
+            resultado = (num1 * num2) / 100;
+            break;
+        default:
+            resultado = 'Error';
+            break;
+    }
+
+    elemento.innerText = resultado;
 }
