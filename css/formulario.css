@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: rgb(158, 206, 191);
+}
+
+p:before {
+    content: attr(type);
+    display: block;
+    font-size: 20px;
+    color: rgb(15, 122, 88);
+    margin-top: 35px;
+}
+
+input {
+    width: 270px;
+    border: none;
+    border-bottom: 2px solid rgb(88, 59, 59);
+    background: none;
+    color: rgb(5, 61, 72);
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 3px solid rgb(46, 5, 5);
+}
+
+.formulario {
+    background: rgb(186, 235, 218);
+    border-radius: 10px;
+    padding: 40px 40px;
+    box-shadow: 10px 10px rgb(113, 153, 139);
+}
+
+button {
+    background: rgb(37, 204, 160);
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+.centrar-boton {
+    display: flex;
+    justify-content: center;
+}
+
+h2,
+header {
+    color: rgb(5, 61, 72);
+    border-bottom: 2px solid rgb(88, 59, 59);
+    font-size: 35px;
+}
