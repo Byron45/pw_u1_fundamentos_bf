@@ -56,3 +56,18 @@ header {
     border-bottom: 2px solid rgb(88, 59, 59);
     font-size: 35px;
 }
+
+.msg_error {
+    background: rgb(103, 202, 199);
+    border-left: 7px solid rgb(44, 85, 79);
+    padding: 10px;
+    color: rgb(55, 49, 49);
+    display: none;
+    font-weight: bold;
+}
+
+.error_asterisco {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
