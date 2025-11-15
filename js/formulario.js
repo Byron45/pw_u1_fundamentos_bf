@@ -3,42 +3,25 @@ function guardar() {
 }
 
 function validarCampos() {
-    let nombre = document.getElementById("id_nombre").value
-    let apellido = document.getElementById("id_apellido").value
-    let fechaNacimiento = document.getElementById("id_fecha_nacimiento").value
-    let email = document.getElementById("id_email").value
-    let password = document.getElementById("id_password").value
+    let cardHolder = document.getElementById("id_cardholder_name").value
+    let cardNumber = document.getElementById("id_card_number").value
+    let expDate = document.getElementById("id_exp_date").value
+    let cvv = document.getElementById("id_cvv").value
 
-    if (nombre === "") {
-        mostrarMensaje('Campo de nombre incompleto');
-        mostrarAsterisco('id_error_nombre');
+    if (cardHolder === "") {
+        mostrarMensaje('Campo de card Holder incompleto');
         return;
-    } else if (apellido === "") {
-        mostrarMensaje('Campo de apellido incompleto');
-        mostrarAsterisco('id_error_apellido');
+    } else if (cardNumber === "") {
+        mostrarMensaje('Campo de número de tarjeta incompleto');
         return;
-    } else if (fechaNacimiento === "") {
-        mostrarMensaje('Campo de fecha de nacimiento incompleto');
-        mostrarAsterisco('id_error_fecha_nacimiento');
+    } else if (expDate === "") {
+        mostrarMensaje('Campo de fecha de expiración incompleto');
         return;
-    } else if (email === "") {
-        mostrarMensaje('Campo de email incompleto');
-        mostrarAsterisco('id_error_email');
-        if (validarEmail(email)) {
-            mostrarMensaje('Email no es válido');
-            mostrarAsterisco('id_error_email');
-            return;
-        }
-        return;
-    } else if (password === "") {
-        mostrarMensaje('Campo de password incompleto');
-        mostrarAsterisco('id_error_password');
-        return;
+    } else if (cvv === "") {
+        mostrarMensaje('Campo de CVV incompleto');
     } else {
-        mostrarMensaje('Formulario enviado correctamente');
-        limpiarMensaje();
+        mostrarMensaje('Tarjeta correcta');
     }
-
 }
 
 function mostrarMensaje(msg) {
@@ -47,20 +30,3 @@ function mostrarMensaje(msg) {
     mensaje.style.display = "block";
 }
 
-function mostrarAsterisco(idElemento) {
-    document.getElementById(idElemento).innerText = "*";
-}
-
-function limpiarMensaje() {
-    let mensaje = document.getElementById("id_msg_error");
-    mensaje.innerText = "";
-    mensaje.style.display = "none";
-
-    const erroresAsterisco = document.querySelectorAll('.error_asterisco');
-    erroresAsterisco.forEach(e => e.innerText = "");
-}
-
-function validarEmail(email) {
-    const patron = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return patron.test(email);
-}
